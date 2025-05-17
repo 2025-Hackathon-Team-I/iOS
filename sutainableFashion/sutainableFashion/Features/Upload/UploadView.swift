@@ -13,8 +13,7 @@ struct UploadView: View {
     
     // 아이템 종류
     let items = ["상의", "하의", "신발", "기타"]
-    // 사이즈
-    let sizes = ["XXXL", "XXL", "XL", "L", "M", "S", "XS", "XXS"]
+    @State private var selectedItem: String? = nil
     
     // 사진 업로드
     @State private var uploadedImages: [UIImage] = []
@@ -24,6 +23,10 @@ struct UploadView: View {
     @State var content: String = ""
     @State var Hashtag: String = ""
     @State var date = Date()
+    
+    // 사이즈
+    let sizes = ["XXXL", "XXL", "XL", "L", "M", "S", "XS", "XXS"]
+    @State private var selectedSize: String? = nil
     
     // 토글
     @State var showGreeting = false
@@ -38,7 +41,13 @@ struct UploadView: View {
                     // 아이템 버튼
                     HStack(spacing: 5) {
                         ForEach(items, id: \.self) { item in
-                            ItemsButton(title: item)
+                            ItemsButton(
+                                title: item,
+                                isSelected: selectedItem == item,
+                                onTap: {
+                                    selectedItem = (selectedItem == item) ? nil : item
+                                }
+                            )
                         }
                     } // HStack
                     
@@ -51,26 +60,39 @@ struct UploadView: View {
                     PhotoUploaderView(images: $uploadedImages)
 
                     // 텍스트 필드
-                    TextField("Title Box", text: $title)
+                    TextField("", text: $title, prompt: Text("Title Box").foregroundColor(Color(hex: 0xC7C7CC)))
                         .padding()
-                        .foregroundStyle(Color(hex: 0xC7C7CC))
                         .background(Color(hex: 0x36363F))
                         .cornerRadius(8)
-                    TextEditor(text: $content)
-                        .cornerRadius(8)
-                        .frame(height: 120)
+                    LimitedTextEditor(
+                        text: $content,
+                        placeholder: "Text contents",
+                        maxCharacters: 300
+                    )
                     
                     // 사이즈
                     SectionTitle(title: "사이즈를 선택해주세요")
                     // 사이즈 버튼
                     HStack{
                         ForEach(0...3, id: \.self) { idx in
-                            SizesButton(title: sizes[idx])
+                            SizesButton(
+                                title: sizes[idx],
+                                isSelected: selectedSize == sizes[idx],
+                                onTap: {
+                                    selectedSize = (selectedSize == sizes[idx]) ? nil : sizes[idx]
+                                }
+                            )
                         }
                     } // HStack
                     HStack {
                         ForEach(4..<sizes.count, id: \.self) { idx in
-                            SizesButton(title: sizes[idx])
+                            SizesButton(
+                                title: sizes[idx],
+                                isSelected: selectedSize == sizes[idx],
+                                onTap: {
+                                    selectedSize = (selectedSize == sizes[idx]) ? nil : sizes[idx]
+                                }
+                            )
                         }
                     } // HStack
                     
@@ -115,17 +137,19 @@ struct SectionTitle: View {
 // 아이템 버튼
 struct ItemsButton: View {
     let title: String
+    let isSelected: Bool
+    let onTap: () -> Void
 
     var body: some View {
         Button(action: {
-            print(title)
+            onTap()
         }) {
             Text(title)
                 .font(.custom("Pretendard Variable", size: 14))
                 .padding(.vertical, 5)
                 .padding(.horizontal, 15)
-                .background(Color(hex: 0x36363F))
-                .foregroundColor(Color(hex: 0x8E8E93))
+                .background(isSelected ? Color(hex: 0x43C9B3) : Color(hex: 0x36363F))
+                .foregroundColor(isSelected ? Color(hex: 0x2C2C36) : Color(hex: 0x8E8E93))
                 .cornerRadius(6)
         }
     }
@@ -134,16 +158,18 @@ struct ItemsButton: View {
 // 사이즈 버튼
 struct SizesButton: View {
     let title: String
+    let isSelected: Bool
+    let onTap: () -> Void
 
     var body: some View {
         Button(action: {
-            print(title)
+            onTap()
         }) {
             Text(title)
                 .font(.custom("Pretendard Variable", size: 16))
                 .frame(width: 60, height: 40)
-                .background(Color(hex: 0x36363F))
-                .foregroundColor(Color(hex: 0x8E8E93))
+                .background(isSelected ? Color(hex: 0x43C9B3) : Color(hex: 0x36363F))
+                .foregroundColor(isSelected ? Color(hex: 0x2C2C36) : Color(hex: 0x8E8E93))
                 .cornerRadius(6)
         }
     }
@@ -208,6 +234,61 @@ struct PhotoUploaderView: View {
                 }
             }
         }
+    }
+}
+
+// 커스텀 텍스트 에디터
+struct LimitedTextEditor: View {
+    @Binding var text: String
+    let placeholder: String
+    let maxCharacters: Int
+    
+    private var characterCount: Int {
+        text.count
+    }
+    
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            // TextEditor
+            TextEditor(text: Binding(
+                get: { self.text },
+                set: { newValue in
+                    // 글자 수 제한 적용
+                    if newValue.count <= maxCharacters {
+                        self.text = newValue
+                    } else {
+                        self.text = String(newValue.prefix(maxCharacters))
+                    }
+                }
+            ))
+            .padding(5)
+            .foregroundColor(.white) // 입력 텍스트는 흰색으로
+            .scrollContentBackground(.hidden) // iOS 16+ 배경 숨기기
+            .background(Color(hex: 0x36363F)) // TextEditor 배경색 설정
+            .cornerRadius(8) // cornerRadius 유지
+            
+            // Placeholder (텍스트가 비어있을 때만 표시)
+            if text.isEmpty {
+                Text(placeholder)
+                    .foregroundColor(Color(hex: 0xC7C7CC))
+                    .padding(.horizontal, 8)
+                    .padding(.top, 8)
+                    .allowsHitTesting(false) // 터치 이벤트가 아래 레이어로 전달되게 함
+            }
+            
+            // 글자 수 카운터
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Text("\(characterCount)/\(maxCharacters)")
+                        .foregroundColor(Color(hex: 0xC7C7CC))
+                        .font(.caption)
+                        .padding(6)
+                }
+            }
+        }
+        .frame(height: 120)
     }
 }
 
