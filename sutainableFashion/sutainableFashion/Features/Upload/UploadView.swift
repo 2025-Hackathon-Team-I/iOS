@@ -29,7 +29,7 @@ struct UploadView: View {
     @State private var selectedSize: String? = nil
     
     // 토글
-    @State var showGreeting = false
+    @State var isForSale = false
     
     var body: some View {
         ZStack {
@@ -103,6 +103,7 @@ struct UploadView: View {
                         .foregroundStyle(Color(hex: 0xFFFFFF))
                     // 해시태그 텍스트필드
                     TextField("Title Box", text: $Hashtag)
+                        .frame(height: 40)
                     
                     // 날짜
                     SectionTitle(title: "사용한 날짜를 입력해주세요")
@@ -110,10 +111,8 @@ struct UploadView: View {
                     DatePicker("", selection: $date)
                     
                     // 판매 여부
-                    Toggle("판매를 희망하시나요?", isOn: $showGreeting)
-                        .font(.custom("Pretendard Variable", size: 20))
-                        .fontWeight(.bold)
-                        .foregroundStyle(Color(hex: 0xFFFFFF))
+                    Toggle("판매를 희망하시나요?", isOn: $isForSale)
+                        .toggleStyle(CustomToggleStyle())
                 } // VStack
                 .padding(10)
             } // ScrollView
@@ -289,6 +288,40 @@ struct LimitedTextEditor: View {
             }
         }
         .frame(height: 120)
+    }
+}
+
+// 토글 스타일
+struct CustomToggleStyle: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack {
+            configuration.label
+                .font(.custom("Pretendard Variable", size: 20))
+                .fontWeight(.bold)
+                .foregroundStyle(Color(hex: 0xFFFFFF))
+            
+            Spacer()
+            
+            // 커스텀 토글 배경과 써클
+            ZStack {
+                // 배경 캡슐
+                Capsule()
+                    .fill(Color(hex: 0x36363F))
+                    .frame(width: 51, height: 31)
+                
+                // 토글 써클
+                Circle()
+                    .fill(configuration.isOn ? Color(hex: 0x8E8E93) : Color(hex: 0x4CD5B5))
+                    .frame(width: 25, height: 25)
+                    .offset(x: configuration.isOn ? 10 : -10, y: 0)
+                    .animation(.spring(response: 0.2), value: configuration.isOn)
+            }
+            .onTapGesture {
+                withAnimation {
+                    configuration.isOn.toggle()
+                }
+            }
+        }
     }
 }
 
