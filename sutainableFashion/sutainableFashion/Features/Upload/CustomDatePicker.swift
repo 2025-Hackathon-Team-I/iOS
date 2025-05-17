@@ -8,15 +8,29 @@
 import SwiftUI
 
 struct CustomDatePicker: View {
-    @State private var selectedYear = 2000
-    @State private var selectedMonth = 0
-    @State private var selectedDay = 0
+    // 오늘 날짜 기준
+    private let today = Date()
+    private let calendar = Calendar.current
+
+    // 연/월/일을 추출해서 초기값 설정
+    @State private var selectedYear: Int
+    @State private var selectedMonth: Int
+    @State private var selectedDay: Int
+
+    init() {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day], from: Date())
+
+        _selectedYear = State(initialValue: components.year ?? 2000)
+        _selectedMonth = State(initialValue: components.month ?? 1)
+        _selectedDay = State(initialValue: components.day ?? 1)
+    }
     
     // 선택 가능한 년도 범위 (예: 1950-현재)
     let years = Array(1950...2025)
     
     // 월 배열 (0~11)
-    let months = Array(0...11)
+    let months = Array(1...12)
     
     // 일 배열 (0~30)
     var days: [Int] {
@@ -24,15 +38,15 @@ struct CustomDatePicker: View {
         let calendar = Calendar.current
         var dateComponents = DateComponents()
         dateComponents.year = selectedYear
-        dateComponents.month = selectedMonth + 1 // 0부터 시작하므로 +1
+        dateComponents.month = selectedMonth
         
         // 해당 월의 일수 계산
         guard let date = calendar.date(from: dateComponents),
               let range = calendar.range(of: .day, in: .month, for: date) else {
-            return Array(0...30) // 기본값
+            return Array(1...31) // 기본값
         }
         
-        return Array(0..<range.count)
+        return Array(range)
     }
     
     var body: some View {
@@ -41,7 +55,7 @@ struct CustomDatePicker: View {
             DateDropdown(
                 title: "\(selectedYear)년",
                 selection: $selectedYear,
-                options: years,
+                options: Array(years.reversed()),
                 formatOption: { "\($0)년" }
             )
             
