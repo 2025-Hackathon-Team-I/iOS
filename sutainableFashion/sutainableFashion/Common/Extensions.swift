@@ -25,7 +25,9 @@ extension Color {
             blue: Double((hex >> 0) & 0xff) / 255,
             opacity: alpha
         )
-      
+    }
+}
+
 extension UIColor {
     convenience init(hex: String, alpha: CGFloat = 1.0) {
         var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
