@@ -5,17 +5,40 @@
 //  Created by 김사랑 on 5/17/25.
 //
 
-import Foundation
+import SwiftUI
 
-class AuthViewModel: ObservableObject {
-    @Published var isLoggedIn = false
+struct LoginView: View {
+    @ObservedObject var viewModel = AuthViewModel()
 
-    func login() {
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("디지털 옷장")
+                .font(.largeTitle)
+                .bold()
+                .padding(.bottom, 50)
 
-        // 로그인 성공 처리
-        self.isLoggedIn = true
+            Button(action: {
+                viewModel.signIn()
+            }) {
+                HStack {
+                    Image(systemName: "applelogo")
+                    Text("Apple로 로그인")
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.black)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+            }
+            .padding(.horizontal, 40)
+        }
+        .padding()
+    }
+}
 
-        // 로그인 성공 알림 전송
-        NotificationCenter.default.post(name: NSNotification.Name("LoginSuccessful"), object: nil)
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView(viewModel: AuthViewModel())
+//            .previewDevice("iPhone 14 Pro")
     }
 }
