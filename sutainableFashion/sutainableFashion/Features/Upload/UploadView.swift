@@ -108,7 +108,7 @@ struct UploadView: View {
                     // 날짜
                     SectionTitle(title: "사용한 날짜를 입력해주세요")
                     // DataPicker
-                    DatePicker("", selection: $date)
+                    CustomDatePicker()
                     
                     // 판매 여부
                     Toggle("판매를 희망하시나요?", isOn: $isForSale)
@@ -311,7 +311,7 @@ struct CustomToggleStyle: ToggleStyle {
                 
                 // 토글 써클
                 Circle()
-                    .fill(configuration.isOn ? Color(hex: 0x8E8E93) : Color(hex: 0x4CD5B5))
+                    .fill(configuration.isOn ? Color(hex: 0x43C9B3) : Color(hex: 0x8E8E93))
                     .frame(width: 25, height: 25)
                     .offset(x: configuration.isOn ? 10 : -10, y: 0)
                     .animation(.spring(response: 0.2), value: configuration.isOn)
