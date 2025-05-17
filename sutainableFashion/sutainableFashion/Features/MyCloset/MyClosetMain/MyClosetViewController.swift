@@ -85,6 +85,13 @@ class MyClosetViewController: UIViewController {
         viewModel.loadClosetItems()
     }
 
+    // MyClosetViewController.swift
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
+
     // MARK: - Setup Methods
     private func setupUI() {
         // 배경색 설정
