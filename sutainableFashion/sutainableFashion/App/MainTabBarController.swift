@@ -24,7 +24,7 @@ class MainTabBarController: UITabBarController {
         loginTab.tabBarItem = UITabBarItem(title: "로그인", image: UIImage(systemName: "person.circle"), tag: 0)
 
         // 2. 내 옷장 탭
-        let closetVC = UIViewController()
+        let closetVC = MyClosetViewController()
         closetVC.title = "내 옷장"
         let closetTab = UINavigationController(rootViewController: closetVC)
         closetTab.tabBarItem = UITabBarItem(title: "내 옷장", image: UIImage(systemName: "tshirt"), tag: 1)
