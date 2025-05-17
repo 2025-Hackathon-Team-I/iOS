@@ -21,7 +21,9 @@ struct UploadView: View {
     // 텍스트필드
     @State var title: String = ""
     @State var content: String = ""
-    @State var Hashtag: String = ""
+    
+    // 해시태그
+    @State private var hashtags: [String] = []
     @State var date = Date()
     
     // 사이즈
@@ -30,6 +32,27 @@ struct UploadView: View {
     
     // 토글
     @State var isForSale = false
+    
+    // 폼 완료 여부 계산
+    private var isFormCompleted: Bool {
+        // 1. 아이템 종류가 선택되어 있는지
+        let hasSelectedItem = selectedItem != nil
+        
+        // 2. 사진이 하나 이상 업로드 되었는지
+        let hasUploadedImage = !uploadedImages.isEmpty
+        
+        // 3. 제목이 입력되어 있는지 (1바이트 이상)
+        let hasTitleInput = !title.isEmpty
+        
+        // 4. 내용이 입력되어 있는지 (1바이트 이상)
+        let hasContentInput = !content.isEmpty
+        
+        // 5. 사이즈가 선택되어 있는지
+        let hasSelectedSize = selectedSize != nil
+        
+        // 모든 필수 조건이 충족되었는지 확인
+        return hasSelectedItem && hasUploadedImage && hasTitleInput && hasContentInput && hasSelectedSize
+    }
     
     var body: some View {
         ZStack {
@@ -63,6 +86,7 @@ struct UploadView: View {
                     TextField("", text: $title, prompt: Text("Title Box").foregroundColor(Color(hex: 0xC7C7CC)))
                         .padding()
                         .background(Color(hex: 0x36363F))
+                        .foregroundColor(Color(hex: 0xC7C7CC))
                         .cornerRadius(8)
                     LimitedTextEditor(
                         text: $content,
@@ -102,8 +126,7 @@ struct UploadView: View {
                         .fontWeight(.bold)
                         .foregroundStyle(Color(hex: 0xFFFFFF))
                     // 해시태그 텍스트필드
-                    TextField("Title Box", text: $Hashtag)
-                        .frame(height: 40)
+                    HashtagInputView(hashtags: $hashtags)
                     
                     // 날짜
                     SectionTitle(title: "사용한 날짜를 입력해주세요")
@@ -113,6 +136,13 @@ struct UploadView: View {
                     // 판매 여부
                     Toggle("판매를 희망하시나요?", isOn: $isForSale)
                         .toggleStyle(CustomToggleStyle())
+                    
+                    // 완료 버튼
+                    CompletionButton(isFormCompleted: isFormCompleted) {
+                        // 완료 버튼 클릭 시 수행할 액션
+                        print("업로드 완료!")
+                        // 여기에 업로드 로직 추가
+                    }
                 } // VStack
                 .padding(10)
             } // ScrollView
