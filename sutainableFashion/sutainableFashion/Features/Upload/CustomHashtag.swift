@@ -31,7 +31,7 @@ struct HashtagInputView: View {
             }
 
             // ✅ 문제 해결: TextField가 보이도록 padding/배경 설정
-            TextField("", text: $currentText)
+            TextField("해시태그 입력", text: $currentText)
                 .onChange(of: currentText) { newValue in
                     if newValue.last == " " {
                         addHashtag()
@@ -42,7 +42,7 @@ struct HashtagInputView: View {
                 .padding(.horizontal, 10)
                 .padding(.vertical, 8)
                 .background(Color(hex: 0x36363F))
-                .foregroundColor(.white)
+                .foregroundColor(Color(hex: 0x8E8E93))
                 .cornerRadius(12)
                 .frame(minWidth: 60) // ✅ 최소 너비 줘야 보임
         }
