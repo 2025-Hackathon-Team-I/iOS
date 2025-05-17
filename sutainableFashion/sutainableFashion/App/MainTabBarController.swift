@@ -30,14 +30,15 @@ class MainTabBarController: UITabBarController {
         let uploadTab = UINavigationController(rootViewController: uploadVC)
         uploadTab.tabBarItem = UITabBarItem(title: "업로드", image: UIImage(systemName: "person.circle"), tag: 1)
 
-        // 3. 히스토리 탭
-        let historyVC = UIViewController()
-        historyVC.title = "히스토리"
-        let historyTab = UINavigationController(rootViewController: historyVC)
-        historyTab.tabBarItem = UITabBarItem(title: "히스토리", image: UIImage(systemName: "clock.arrow.circlepath"), tag: 2)
+        // 3. 트래블 탭
+        let travelHomeViewModel = TravelHomeViewModel()
+        let travelHomeView = TravelHomeView(viewModel: travelHomeViewModel)
+        let travelHomeViewVC = UIHostingController(rootView: travelHomeView)
+        let travelHomeTab = UINavigationController(rootViewController: travelHomeViewVC)
+        travelHomeTab.tabBarItem = UITabBarItem(title: "트래블", image: UIImage(systemName: "person.circle"), tag: 2)
 
         // 모든 탭 설정
-        viewControllers = [closetTab, uploadTab, historyTab]
+        viewControllers = [closetTab, uploadTab, travelHomeTab]
     }
     
     override func viewDidLayoutSubviews() {
