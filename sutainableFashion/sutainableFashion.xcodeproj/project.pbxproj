@@ -210,6 +210,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				8A6869E02DD898E9005141DA /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				8A686AB42DD8B566005141DA /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8A686AB52DD8B5CE005141DA /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8A6869AA2DD88A12005141DA /* Products */;
@@ -572,6 +574,22 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.59.1;
+			};
+		};
+		8A686AB42DD8B566005141DA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		8A686AB52DD8B5CE005141DA /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
