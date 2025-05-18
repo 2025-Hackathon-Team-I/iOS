@@ -75,19 +75,46 @@ struct UploadView: View {
                     } // HStack
                     
                     // 사진 업로드
-                    Text("최대 다섯 장까지 가능해요")
-                        .font(.custom("Pretendard Variable", size: 16))
-                        .fontWeight(.semibold)
-                        .foregroundStyle(Color(hex: 0xFFFFFF))
+                    HStack {
+                        Text("최대 다섯 장까지 가능해요")
+                            .font(.custom("Pretendard Variable", size: 16))
+                            .fontWeight(.semibold)
+                            .foregroundStyle(Color(hex: 0xFFFFFF))
+                        Spacer()
+                        Text("*필수")
+                            .foregroundStyle(Color(hex: 0x43C9B3))
+                            .font(.custom("Pretendard Variable", size: 12))
+                    }
                     // 사진 추가
                     PhotoUploaderView(images: $uploadedImages)
 
                     // 텍스트 필드
+                    HStack {
+                        Text("패션템 이름을 적어주세요")
+                            .font(.custom("Pretendard Variable", size: 16))
+                            .fontWeight(.semibold)
+                            .foregroundStyle(Color(hex: 0xFFFFFF))
+                        Spacer()
+                        Text("*필수")
+                            .foregroundStyle(Color(hex: 0x43C9B3))
+                            .font(.custom("Pretendard Variable", size: 12))
+                    }
                     TextField("", text: $title, prompt: Text("Title Box").foregroundColor(Color(hex: 0xC7C7CC)))
                         .padding()
                         .background(Color(hex: 0x36363F))
                         .foregroundColor(Color(hex: 0xC7C7CC))
                         .cornerRadius(8)
+                    
+                    HStack {
+                        Text("당신의 패션템을 소개해주세요")
+                            .font(.custom("Pretendard Variable", size: 16))
+                            .fontWeight(.semibold)
+                            .foregroundStyle(Color(hex: 0xFFFFFF))
+                        Spacer()
+                        Text("*필수")
+                            .foregroundStyle(Color(hex: 0x43C9B3))
+                            .font(.custom("Pretendard Variable", size: 12))
+                    }
                     LimitedTextEditor(
                         text: $content,
                         placeholder: "Text contents",
@@ -95,7 +122,13 @@ struct UploadView: View {
                     )
                     
                     // 사이즈
-                    SectionTitle(title: "사이즈를 선택해주세요")
+                    HStack {
+                        SectionTitle(title: "사이즈를 골라주세요")
+                        Spacer()
+                        Text("*필수")
+                            .foregroundStyle(Color(hex: 0x43C9B3))
+                            .font(.custom("Pretendard Variable", size: 12))
+                    }
                     // 사이즈 버튼
                     HStack{
                         ForEach(0...3, id: \.self) { idx in
@@ -119,14 +152,6 @@ struct UploadView: View {
                             )
                         }
                     } // HStack
-                    
-                    // 해시태그
-                    Text("해시태그를 추가해주세요")
-                        .font(.custom("Pretendard Variable", size: 20))
-                        .fontWeight(.bold)
-                        .foregroundStyle(Color(hex: 0xFFFFFF))
-                    // 해시태그 텍스트필드
-                    HashtagInputView(hashtags: $hashtags)
                     
                     // 날짜
                     SectionTitle(title: "사용한 날짜를 입력해주세요")
