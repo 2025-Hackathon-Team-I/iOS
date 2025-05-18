@@ -42,11 +42,10 @@ class AddressSearchViewController: UIViewController {
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 
-        // ✅ 자동 높이 조절 설정
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
 
-        searchField.addTarget(self, action: #selector(textChanged), for: .editingChanged)
+//        searchField.addTarget(self, action: #selector(textChanged), for: .editingChanged)
 
         searchCompleter.delegate = self
         searchCompleter.resultTypes = .address

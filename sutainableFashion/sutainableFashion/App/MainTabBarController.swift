@@ -18,24 +18,26 @@ class MainTabBarController: UITabBarController {
     private func setupTabs() {
         // 1. 내 옷장 탭
         let closetVC = MyClosetViewController()
-        closetVC.title = "내 옷장"
         let closetTab = UINavigationController(rootViewController: closetVC)
-        closetTab.tabBarItem = UITabBarItem(title: "내 옷장", image: UIImage(systemName: "tshirt"), tag: 0)
-        
+        closetTab.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "closet") ?? UIImage(), selectedImage: UIImage(named: "closet.fill") ?? UIImage())
+        closetTab.tabBarItem.imageInsets = UIEdgeInsets(top: 20.5, left: 0, bottom: -20.5, right: 0)
+
         // 2. 업로드 탭
         let uploadViewModel = UploadViewModel()
         let uploadView = UploadView(viewModel: uploadViewModel)
         let uploadVC = UIHostingController(rootView: uploadView)
         uploadVC.title = "업로드"
         let uploadTab = UINavigationController(rootViewController: uploadVC)
-        uploadTab.tabBarItem = UITabBarItem(title: "업로드", image: UIImage(systemName: "person.circle"), tag: 1)
+        uploadTab.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "upload") ?? UIImage(), selectedImage: UIImage(named: "upload.fill") ?? UIImage())
+        uploadTab.tabBarItem.imageInsets = UIEdgeInsets(top: 20.5, left: 0, bottom: -20.5, right: 0)
 
         // 3. 트래블 탭
         let travelHomeViewModel = TravelHomeViewModel()
         let travelHomeView = TravelHomeView(viewModel: travelHomeViewModel)
         let travelHomeViewVC = UIHostingController(rootView: travelHomeView)
         let travelHomeTab = UINavigationController(rootViewController: travelHomeViewVC)
-        travelHomeTab.tabBarItem = UITabBarItem(title: "트래블", image: UIImage(systemName: "person.circle"), tag: 2)
+        travelHomeTab.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "travel") ?? UIImage(), selectedImage: UIImage(named: "travel.fill") ?? UIImage())
+        travelHomeTab.tabBarItem.imageInsets = UIEdgeInsets(top: 20.5, left: 0, bottom: -20.5, right: 0)
 
         // 모든 탭 설정
         viewControllers = [closetTab, uploadTab, travelHomeTab]

@@ -32,12 +32,13 @@ struct TravelHomeView: View {
     var body: some View {
         VStack(spacing: 0) {
             VStack(spacing: 0) {
-                Map(coordinateRegion: $region, annotationItems: locations) { location in
+                // viewModel.getMapLocations()을 사용하여 모든 아이템의 위치를 지도에 표시
+                Map(coordinateRegion: $region, annotationItems: viewModel.getMapLocations()) { location in
                     MapMarker(coordinate: location.coordinate, tint: Color(hex: 0x43C9B3))
                 }
                 .edgesIgnoringSafeArea(.all)
             } // VStack
-            
+
             // 시트처럼 보이는 카드 뷰
             VStack(spacing: 0) {
                 VStack(alignment: .leading) {
@@ -47,11 +48,11 @@ struct TravelHomeView: View {
                         .padding(.horizontal)
                         .padding(.top, 25)
                         .foregroundStyle(Color(hex: 0xFFFFFF))
-                    
+
                     ScrollView {
                         VStack(spacing: 12) {
-                            ForEach(0..<2) { _ in
-                                FashionItemCard()
+                            ForEach(viewModel.sampleItems) { item in
+                                FashionItemCard(item: item, viewModel: viewModel)
                             }
                         }
                         .padding(.horizontal)
@@ -59,7 +60,7 @@ struct TravelHomeView: View {
                     }
                 }
                 .padding(.top, 8)
-                
+
             } // VStack
             .edgesIgnoringSafeArea(.bottom)
             .background(Color(hex: 0x2C2C32))
@@ -69,14 +70,36 @@ struct TravelHomeView: View {
 
 // MARK: - 하단 카드 UI
 struct FashionItemCard: View {
+    let item: TravelItem
+    let viewModel: TravelHomeViewModel
+
     var body: some View {
         HStack(spacing: 12) {
             ZStack(alignment: .topLeading) {
-                Color.gray
+                // 이미지 URL이 있으면 로드, 없으면 회색 배경 표시
+                if !item.imageUrl.isEmpty {
+                    AsyncImage(url: URL(string: item.imageUrl)) { phase in
+                        switch phase {
+                        case .empty:
+                            Color.gray
+                        case .success(let image):
+                            image.resizable().scaledToFill()
+                        case .failure:
+                            Color.gray
+                        @unknown default:
+                            Color.gray
+                        }
+                    }
                     .frame(width: 130, height: 99)
                     .cornerRadius(12)
+                    .clipped()
+                } else {
+                    Color.gray
+                        .frame(width: 130, height: 99)
+                        .cornerRadius(12)
+                }
 
-                Text("NN명 사용")
+                Text("\(item.usersCount)명 사용")
                     .font(.caption2)
                     .padding(4)
                     .background(Color(hex: 0x000000, alpha: 0.4))
@@ -86,16 +109,16 @@ struct FashionItemCard: View {
             }
 
             VStack(alignment: .leading, spacing: 4) {
-                Text("아이템 이름")
+                Text(item.name)
                     .bold()
                     .foregroundStyle(Color(hex: 0xFFFFFF))
 
-                Text("주소이름 주소이름 주소이름\n주소이름 주소이름")
+                Text(item.location)
                     .font(.caption)
                     .foregroundColor(Color(hex: 0xE5E5EA))
                     .lineLimit(2)
 
-                Text("전체 사용 기간 | 000일")
+                Text("전체 사용 기간 | \(item.usedDays)일")
                     .font(.caption2)
                     .foregroundColor(Color(hex: 0x8E8E93))
             }
@@ -105,8 +128,12 @@ struct FashionItemCard: View {
         .padding()
         .background(Color.black.opacity(0.05))
         .cornerRadius(12)
+        .onTapGesture {
+            viewModel.navigateToDetail(for: item.id)
+        }
     }
 }
+
 // 위치 데이터 모델
 struct Location: Identifiable {
     let id = UUID()
