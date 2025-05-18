@@ -38,13 +38,13 @@ class MyClosetViewController: UIViewController {
         return label
     }()
 
-    private let searchButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
-        button.tintColor = .white
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
+//    private let searchButton: UIButton = {
+//        let button = UIButton(type: .system)
+//        button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+//        button.tintColor = .white
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        return button
+//    }()
 
     private let categoryCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -102,7 +102,7 @@ class MyClosetViewController: UIViewController {
 
         // 상단 헤더 UI 추가
         view.addSubview(titleLabel)
-        view.addSubview(searchButton)
+//        view.addSubview(searchButton)
 
         // 카테고리 컬렉션뷰 추가
         view.addSubview(categoryCollectionView)
@@ -122,11 +122,11 @@ class MyClosetViewController: UIViewController {
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
-            // 검색 버튼 제약 조건
-            searchButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
-            searchButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            searchButton.widthAnchor.constraint(equalToConstant: 24),
-            searchButton.heightAnchor.constraint(equalToConstant: 24),
+//            // 검색 버튼 제약 조건
+//            searchButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+//            searchButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+//            searchButton.widthAnchor.constraint(equalToConstant: 24),
+//            searchButton.heightAnchor.constraint(equalToConstant: 24),
 
             topBorder.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
             topBorder.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
@@ -155,8 +155,8 @@ class MyClosetViewController: UIViewController {
             loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
 
-        // 버튼 액션 설정
-        searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
+//        // 버튼 액션 설정
+//        searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
     }
 
     private func setupTableViewAndCollectionView() {
@@ -235,15 +235,15 @@ class MyClosetViewController: UIViewController {
         present(alert, animated: true)
     }
 
-    @objc private func searchButtonTapped() {
-        // 검색 화면으로 이동
-        print("검색 버튼 탭")
-    }
+//    @objc private func searchButtonTapped() {
+//        // 검색 화면으로 이동
+//        print("검색 버튼 탭")
+//    }
 
-    @objc private func notificationButtonTapped() {
-        // 알림 화면으로 이동
-        print("알림 버튼 탭")
-    }
+//    @objc private func notificationButtonTapped() {
+//        // 알림 화면으로 이동
+//        print("알림 버튼 탭")
+//    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource

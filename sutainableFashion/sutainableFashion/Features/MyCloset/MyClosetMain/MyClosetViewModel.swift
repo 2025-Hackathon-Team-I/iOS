@@ -12,7 +12,7 @@ import UIKit
 
 class MyClosetViewModel {
     // MARK: - Published 프로퍼티 (반응형 데이터)
-    @Published var userNickname: String = "."
+    @Published var userNickname: String = "승환킴"
     @Published var categories = ClothingItem.Category.all
     @Published var selectedCategoryIndex = 0
     @Published var allItems: [ClothingItem] = []
