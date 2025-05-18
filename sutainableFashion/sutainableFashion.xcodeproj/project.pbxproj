@@ -7,40 +7,53 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		D05FA5A62DD868400079A651 /* PBXContainerItemProxy */ = {
+		8A6869C32DD88A15005141DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D05FA5882DD8683B0079A651 /* Project object */;
+			containerPortal = 8A6869A12DD88A12005141DA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D05FA58F2DD8683B0079A651;
+			remoteGlobalIDString = 8A6869A82DD88A12005141DA;
 			remoteInfo = sutainableFashion;
 		};
-		D05FA5B02DD868400079A651 /* PBXContainerItemProxy */ = {
+		8A6869CD2DD88A15005141DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D05FA5882DD8683B0079A651 /* Project object */;
+			containerPortal = 8A6869A12DD88A12005141DA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D05FA58F2DD8683B0079A651;
+			remoteGlobalIDString = 8A6869A82DD88A12005141DA;
 			remoteInfo = sutainableFashion;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D05FA5902DD8683B0079A651 /* sutainableFashion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sutainableFashion.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D05FA5A52DD868400079A651 /* sutainableFashionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sutainableFashionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D05FA5AF2DD868400079A651 /* sutainableFashionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sutainableFashionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A6869A92DD88A12005141DA /* sutainableFashion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sutainableFashion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A6869C22DD88A15005141DA /* sutainableFashionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sutainableFashionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A6869CC2DD88A15005141DA /* sutainableFashionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sutainableFashionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8A6869D42DD88A15005141DA /* Exceptions for "sutainableFashion" folder in "sutainableFashion" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8A6869A82DD88A12005141DA /* sutainableFashion */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		D05FA5922DD8683B0079A651 /* sutainableFashion */ = {
+		8A6869AB2DD88A12005141DA /* sutainableFashion */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8A6869D42DD88A15005141DA /* Exceptions for "sutainableFashion" folder in "sutainableFashion" target */,
+			);
 			path = sutainableFashion;
 			sourceTree = "<group>";
 		};
-		D05FA5A82DD868400079A651 /* sutainableFashionTests */ = {
+		8A6869C52DD88A15005141DA /* sutainableFashionTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = sutainableFashionTests;
 			sourceTree = "<group>";
 		};
-		D05FA5B22DD868400079A651 /* sutainableFashionUITests */ = {
+		8A6869CF2DD88A15005141DA /* sutainableFashionUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = sutainableFashionUITests;
 			sourceTree = "<group>";
@@ -48,21 +61,21 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D05FA58D2DD8683B0079A651 /* Frameworks */ = {
+		8A6869A62DD88A12005141DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D05FA5A22DD868400079A651 /* Frameworks */ = {
+		8A6869BF2DD88A15005141DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D05FA5AC2DD868400079A651 /* Frameworks */ = {
+		8A6869C92DD88A15005141DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,22 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D05FA5872DD8683B0079A651 = {
+		8A6869A02DD88A12005141DA = {
 			isa = PBXGroup;
 			children = (
-				D05FA5922DD8683B0079A651 /* sutainableFashion */,
-				D05FA5A82DD868400079A651 /* sutainableFashionTests */,
-				D05FA5B22DD868400079A651 /* sutainableFashionUITests */,
-				D05FA5912DD8683B0079A651 /* Products */,
+				8A6869AB2DD88A12005141DA /* sutainableFashion */,
+				8A6869C52DD88A15005141DA /* sutainableFashionTests */,
+				8A6869CF2DD88A15005141DA /* sutainableFashionUITests */,
+				8A6869AA2DD88A12005141DA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D05FA5912DD8683B0079A651 /* Products */ = {
+		8A6869AA2DD88A12005141DA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D05FA5902DD8683B0079A651 /* sutainableFashion.app */,
-				D05FA5A52DD868400079A651 /* sutainableFashionTests.xctest */,
-				D05FA5AF2DD868400079A651 /* sutainableFashionUITests.xctest */,
+				8A6869A92DD88A12005141DA /* sutainableFashion.app */,
+				8A6869C22DD88A15005141DA /* sutainableFashionTests.xctest */,
+				8A6869CC2DD88A15005141DA /* sutainableFashionUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,134 +108,139 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D05FA58F2DD8683B0079A651 /* sutainableFashion */ = {
+		8A6869A82DD88A12005141DA /* sutainableFashion */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D05FA5B92DD868400079A651 /* Build configuration list for PBXNativeTarget "sutainableFashion" */;
+			buildConfigurationList = 8A6869D52DD88A15005141DA /* Build configuration list for PBXNativeTarget "sutainableFashion" */;
 			buildPhases = (
-				D05FA58C2DD8683B0079A651 /* Sources */,
-				D05FA58D2DD8683B0079A651 /* Frameworks */,
-				D05FA58E2DD8683B0079A651 /* Resources */,
+				8A6869A52DD88A12005141DA /* Sources */,
+				8A6869A62DD88A12005141DA /* Frameworks */,
+				8A6869A72DD88A12005141DA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				D05FA5922DD8683B0079A651 /* sutainableFashion */,
+				8A6869AB2DD88A12005141DA /* sutainableFashion */,
 			);
 			name = sutainableFashion;
 			packageProductDependencies = (
 			);
 			productName = sutainableFashion;
-			productReference = D05FA5902DD8683B0079A651 /* sutainableFashion.app */;
+			productReference = 8A6869A92DD88A12005141DA /* sutainableFashion.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D05FA5A42DD868400079A651 /* sutainableFashionTests */ = {
+		8A6869C12DD88A15005141DA /* sutainableFashionTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D05FA5BC2DD868400079A651 /* Build configuration list for PBXNativeTarget "sutainableFashionTests" */;
+			buildConfigurationList = 8A6869DA2DD88A15005141DA /* Build configuration list for PBXNativeTarget "sutainableFashionTests" */;
 			buildPhases = (
-				D05FA5A12DD868400079A651 /* Sources */,
-				D05FA5A22DD868400079A651 /* Frameworks */,
-				D05FA5A32DD868400079A651 /* Resources */,
+				8A6869BE2DD88A15005141DA /* Sources */,
+				8A6869BF2DD88A15005141DA /* Frameworks */,
+				8A6869C02DD88A15005141DA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D05FA5A72DD868400079A651 /* PBXTargetDependency */,
+				8A6869C42DD88A15005141DA /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				D05FA5A82DD868400079A651 /* sutainableFashionTests */,
+				8A6869C52DD88A15005141DA /* sutainableFashionTests */,
 			);
 			name = sutainableFashionTests;
 			packageProductDependencies = (
 			);
 			productName = sutainableFashionTests;
-			productReference = D05FA5A52DD868400079A651 /* sutainableFashionTests.xctest */;
+			productReference = 8A6869C22DD88A15005141DA /* sutainableFashionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D05FA5AE2DD868400079A651 /* sutainableFashionUITests */ = {
+		8A6869CB2DD88A15005141DA /* sutainableFashionUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D05FA5BF2DD868400079A651 /* Build configuration list for PBXNativeTarget "sutainableFashionUITests" */;
+			buildConfigurationList = 8A6869DD2DD88A15005141DA /* Build configuration list for PBXNativeTarget "sutainableFashionUITests" */;
 			buildPhases = (
-				D05FA5AB2DD868400079A651 /* Sources */,
-				D05FA5AC2DD868400079A651 /* Frameworks */,
-				D05FA5AD2DD868400079A651 /* Resources */,
+				8A6869C82DD88A15005141DA /* Sources */,
+				8A6869C92DD88A15005141DA /* Frameworks */,
+				8A6869CA2DD88A15005141DA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D05FA5B12DD868400079A651 /* PBXTargetDependency */,
+				8A6869CE2DD88A15005141DA /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				D05FA5B22DD868400079A651 /* sutainableFashionUITests */,
+				8A6869CF2DD88A15005141DA /* sutainableFashionUITests */,
 			);
 			name = sutainableFashionUITests;
 			packageProductDependencies = (
 			);
 			productName = sutainableFashionUITests;
-			productReference = D05FA5AF2DD868400079A651 /* sutainableFashionUITests.xctest */;
+			productReference = 8A6869CC2DD88A15005141DA /* sutainableFashionUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D05FA5882DD8683B0079A651 /* Project object */ = {
+		8A6869A12DD88A12005141DA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					D05FA58F2DD8683B0079A651 = {
+					8A6869A82DD88A12005141DA = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					D05FA5A42DD868400079A651 = {
+					8A6869C12DD88A15005141DA = {
 						CreatedOnToolsVersion = 16.2;
-						TestTargetID = D05FA58F2DD8683B0079A651;
+						TestTargetID = 8A6869A82DD88A12005141DA;
 					};
-					D05FA5AE2DD868400079A651 = {
+					8A6869CB2DD88A15005141DA = {
 						CreatedOnToolsVersion = 16.2;
-						TestTargetID = D05FA58F2DD8683B0079A651;
+						TestTargetID = 8A6869A82DD88A12005141DA;
 					};
 				};
 			};
-			buildConfigurationList = D05FA58B2DD8683B0079A651 /* Build configuration list for PBXProject "sutainableFashion" */;
+			buildConfigurationList = 8A6869A42DD88A12005141DA /* Build configuration list for PBXProject "sutainableFashion" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = D05FA5872DD8683B0079A651;
+			mainGroup = 8A6869A02DD88A12005141DA;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8A6869E02DD898E9005141DA /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				8A686AB42DD8B566005141DA /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8A686AB52DD8B5CE005141DA /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = D05FA5912DD8683B0079A651 /* Products */;
+			productRefGroup = 8A6869AA2DD88A12005141DA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D05FA58F2DD8683B0079A651 /* sutainableFashion */,
-				D05FA5A42DD868400079A651 /* sutainableFashionTests */,
-				D05FA5AE2DD868400079A651 /* sutainableFashionUITests */,
+				8A6869A82DD88A12005141DA /* sutainableFashion */,
+				8A6869C12DD88A15005141DA /* sutainableFashionTests */,
+				8A6869CB2DD88A15005141DA /* sutainableFashionUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D05FA58E2DD8683B0079A651 /* Resources */ = {
+		8A6869A72DD88A12005141DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D05FA5A32DD868400079A651 /* Resources */ = {
+		8A6869C02DD88A15005141DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D05FA5AD2DD868400079A651 /* Resources */ = {
+		8A6869CA2DD88A15005141DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,21 +250,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D05FA58C2DD8683B0079A651 /* Sources */ = {
+		8A6869A52DD88A12005141DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D05FA5A12DD868400079A651 /* Sources */ = {
+		8A6869BE2DD88A15005141DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D05FA5AB2DD868400079A651 /* Sources */ = {
+		8A6869C82DD88A15005141DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,20 +274,74 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D05FA5A72DD868400079A651 /* PBXTargetDependency */ = {
+		8A6869C42DD88A15005141DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D05FA58F2DD8683B0079A651 /* sutainableFashion */;
-			targetProxy = D05FA5A62DD868400079A651 /* PBXContainerItemProxy */;
+			target = 8A6869A82DD88A12005141DA /* sutainableFashion */;
+			targetProxy = 8A6869C32DD88A15005141DA /* PBXContainerItemProxy */;
 		};
-		D05FA5B12DD868400079A651 /* PBXTargetDependency */ = {
+		8A6869CE2DD88A15005141DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D05FA58F2DD8683B0079A651 /* sutainableFashion */;
-			targetProxy = D05FA5B02DD868400079A651 /* PBXContainerItemProxy */;
+			target = 8A6869A82DD88A12005141DA /* sutainableFashion */;
+			targetProxy = 8A6869CD2DD88A15005141DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		D05FA5B72DD868400079A651 /* Debug */ = {
+		8A6869D62DD88A15005141DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SB87AFXHM2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sutainableFashion/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sutainableFashion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A6869D72DD88A15005141DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SB87AFXHM2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sutainableFashion/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sutainableFashion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8A6869D82DD88A15005141DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -332,7 +404,7 @@
 			};
 			name = Debug;
 		};
-		D05FA5B82DD868400079A651 /* Release */ = {
+		8A6869D92DD88A15005141DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -388,75 +460,16 @@
 			};
 			name = Release;
 		};
-		D05FA5BA2DD868400079A651 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"sutainableFashion/Preview Content\"";
-				DEVELOPMENT_TEAM = SB87AFXHM2;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Chii-U.sutainableFashion";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D05FA5BB2DD868400079A651 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"sutainableFashion/Preview Content\"";
-				DEVELOPMENT_TEAM = SB87AFXHM2;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Chii-U.sutainableFashion";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		D05FA5BD2DD868400079A651 /* Debug */ = {
+		8A6869DB2DD88A15005141DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SB87AFXHM2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Chii-U.sutainableFashionTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sutainableFashionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -465,17 +478,16 @@
 			};
 			name = Debug;
 		};
-		D05FA5BE2DD868400079A651 /* Release */ = {
+		8A6869DC2DD88A15005141DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SB87AFXHM2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Chii-U.sutainableFashionTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sutainableFashionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -484,15 +496,14 @@
 			};
 			name = Release;
 		};
-		D05FA5C02DD868400079A651 /* Debug */ = {
+		8A6869DE2DD88A15005141DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SB87AFXHM2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Chii-U.sutainableFashionUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sutainableFashionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -501,15 +512,14 @@
 			};
 			name = Debug;
 		};
-		D05FA5C12DD868400079A651 /* Release */ = {
+		8A6869DF2DD88A15005141DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SB87AFXHM2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Chii-U.sutainableFashionUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sutainableFashionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -521,43 +531,70 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D05FA58B2DD8683B0079A651 /* Build configuration list for PBXProject "sutainableFashion" */ = {
+		8A6869A42DD88A12005141DA /* Build configuration list for PBXProject "sutainableFashion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D05FA5B72DD868400079A651 /* Debug */,
-				D05FA5B82DD868400079A651 /* Release */,
+				8A6869D82DD88A15005141DA /* Debug */,
+				8A6869D92DD88A15005141DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D05FA5B92DD868400079A651 /* Build configuration list for PBXNativeTarget "sutainableFashion" */ = {
+		8A6869D52DD88A15005141DA /* Build configuration list for PBXNativeTarget "sutainableFashion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D05FA5BA2DD868400079A651 /* Debug */,
-				D05FA5BB2DD868400079A651 /* Release */,
+				8A6869D62DD88A15005141DA /* Debug */,
+				8A6869D72DD88A15005141DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D05FA5BC2DD868400079A651 /* Build configuration list for PBXNativeTarget "sutainableFashionTests" */ = {
+		8A6869DA2DD88A15005141DA /* Build configuration list for PBXNativeTarget "sutainableFashionTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D05FA5BD2DD868400079A651 /* Debug */,
-				D05FA5BE2DD868400079A651 /* Release */,
+				8A6869DB2DD88A15005141DA /* Debug */,
+				8A6869DC2DD88A15005141DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D05FA5BF2DD868400079A651 /* Build configuration list for PBXNativeTarget "sutainableFashionUITests" */ = {
+		8A6869DD2DD88A15005141DA /* Build configuration list for PBXNativeTarget "sutainableFashionUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D05FA5C02DD868400079A651 /* Debug */,
-				D05FA5C12DD868400079A651 /* Release */,
+				8A6869DE2DD88A15005141DA /* Debug */,
+				8A6869DF2DD88A15005141DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8A6869E02DD898E9005141DA /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.59.1;
+			};
+		};
+		8A686AB42DD8B566005141DA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		8A686AB52DD8B5CE005141DA /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
-	rootObject = D05FA5882DD8683B0079A651 /* Project object */;
+	rootObject = 8A6869A12DD88A12005141DA /* Project object */;
 }
